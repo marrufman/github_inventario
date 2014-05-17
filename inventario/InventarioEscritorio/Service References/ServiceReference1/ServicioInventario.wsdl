@@ -1,0 +1,1682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://localhost/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/">
+      <s:element name="AccesoPortal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccesoPortalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccesoPortalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneRutas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneRutasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneRutasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtienePuntosVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_ruta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtienePuntosVentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtienePuntosVentaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneProductosPV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_punto_venta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneProductosPVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneProductosPVResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneDetalleProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_producto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneDetalleProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneDetalleProductoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneAtribDisponibles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_producto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneAtribDisponiblesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneAtribDisponiblesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneProductosDisponibles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_punto_venta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneProductosDisponiblesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneProductosDisponiblesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneProductos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtieneProductosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneProductosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneUsuarios">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtieneUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneTodosPuntosVenta">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtieneTodosPuntosVentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneTodosPuntosVentaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtienePerfiles">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtienePerfilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtienePerfilesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneTodasRutas">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtieneTodasRutasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneTodasRutasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneTodosPromotores">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtieneTodosPromotoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneTodosPromotoresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtienePuntosVentaDisponibles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_ruta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtienePuntosVentaDisponiblesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtienePuntosVentaDisponiblesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneIdUsuarioPorNombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneIdUsuarioPorNombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneIdUsuarioPorNombreResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneIdPerfilPorNombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="perfil" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneIdPerfilPorNombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneIdPerfilPorNombreResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtieneTodosAtributos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtieneTodosAtributosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneTodosAtributosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtienePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtienePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtienePasswordResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapturarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_producto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_atributo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapturarProductoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AltaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_perfil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellidos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AltaUsuarioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddRuta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_ruta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_promotor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddRutaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddRutaPuntoVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_ruta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_punto_venta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddRutaPuntoVentaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddAtribProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAtribProductoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EditaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_perfil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellidos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditaUsuarioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EditaRuta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_ruta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_ruta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_promotor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditaRutaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EditAtribProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_atributo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditAtribProductoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BajaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BajaUsuarioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BorraRuta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_ruta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorraRutaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BorraRutaPuntoVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_ruta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_punto_venta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorraRutaPuntoVentaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AsignaProductoPV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_cat_producto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_punto_venta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsignaProductoPVResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AgregarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_producto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarProductoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AltaPuntoVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_pv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion_pv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AltaPuntoVentaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EditarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_producto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_cat_producto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditarProductoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EditaPuntoVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_punto_venta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_pv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion_pv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditaPuntoVentaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BorrarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_cat_producto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarProductoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BorrarPuntoVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_punto_venta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarPuntoVentaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtieneCatlogin">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtieneCatloginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtieneCatloginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaLote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_ruta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_pv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion_pv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_producto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atributo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaLoteResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AccesoPortalSoapIn">
+    <wsdl:part name="parameters" element="tns:AccesoPortal" />
+  </wsdl:message>
+  <wsdl:message name="AccesoPortalSoapOut">
+    <wsdl:part name="parameters" element="tns:AccesoPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneRutasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneRutas" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneRutasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneRutasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtienePuntosVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtienePuntosVenta" />
+  </wsdl:message>
+  <wsdl:message name="ObtienePuntosVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtienePuntosVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneProductosPVSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneProductosPV" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneProductosPVSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneProductosPVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneDetalleProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneDetalleProducto" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneDetalleProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneDetalleProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneAtribDisponiblesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneAtribDisponibles" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneAtribDisponiblesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneAtribDisponiblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneProductosDisponiblesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneProductosDisponibles" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneProductosDisponiblesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneProductosDisponiblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneProductosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneProductos" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneProductosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneTodosPuntosVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneTodosPuntosVenta" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneTodosPuntosVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneTodosPuntosVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtienePerfilesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtienePerfiles" />
+  </wsdl:message>
+  <wsdl:message name="ObtienePerfilesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtienePerfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneTodasRutasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneTodasRutas" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneTodasRutasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneTodasRutasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneTodosPromotoresSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneTodosPromotores" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneTodosPromotoresSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneTodosPromotoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtienePuntosVentaDisponiblesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtienePuntosVentaDisponibles" />
+  </wsdl:message>
+  <wsdl:message name="ObtienePuntosVentaDisponiblesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtienePuntosVentaDisponiblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneIdUsuarioPorNombreSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneIdUsuarioPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneIdUsuarioPorNombreSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneIdUsuarioPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneIdPerfilPorNombreSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneIdPerfilPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneIdPerfilPorNombreSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneIdPerfilPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneTodosAtributosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneTodosAtributos" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneTodosAtributosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneTodosAtributosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtienePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtienePassword" />
+  </wsdl:message>
+  <wsdl:message name="ObtienePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtienePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="CapturarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:CapturarProducto" />
+  </wsdl:message>
+  <wsdl:message name="CapturarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:CapturarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AltaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:AltaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="AltaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:AltaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddRutaSoapIn">
+    <wsdl:part name="parameters" element="tns:AddRuta" />
+  </wsdl:message>
+  <wsdl:message name="AddRutaSoapOut">
+    <wsdl:part name="parameters" element="tns:AddRutaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddRutaPuntoVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:AddRutaPuntoVenta" />
+  </wsdl:message>
+  <wsdl:message name="AddRutaPuntoVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:AddRutaPuntoVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAtribProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAtribProducto" />
+  </wsdl:message>
+  <wsdl:message name="AddAtribProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAtribProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:EditaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="EditaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:EditaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditaRutaSoapIn">
+    <wsdl:part name="parameters" element="tns:EditaRuta" />
+  </wsdl:message>
+  <wsdl:message name="EditaRutaSoapOut">
+    <wsdl:part name="parameters" element="tns:EditaRutaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditAtribProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:EditAtribProducto" />
+  </wsdl:message>
+  <wsdl:message name="EditAtribProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:EditAtribProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BajaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:BajaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="BajaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:BajaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorraRutaSoapIn">
+    <wsdl:part name="parameters" element="tns:BorraRuta" />
+  </wsdl:message>
+  <wsdl:message name="BorraRutaSoapOut">
+    <wsdl:part name="parameters" element="tns:BorraRutaResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorraRutaPuntoVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:BorraRutaPuntoVenta" />
+  </wsdl:message>
+  <wsdl:message name="BorraRutaPuntoVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:BorraRutaPuntoVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AsignaProductoPVSoapIn">
+    <wsdl:part name="parameters" element="tns:AsignaProductoPV" />
+  </wsdl:message>
+  <wsdl:message name="AsignaProductoPVSoapOut">
+    <wsdl:part name="parameters" element="tns:AsignaProductoPVResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarProducto" />
+  </wsdl:message>
+  <wsdl:message name="AgregarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AltaPuntoVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:AltaPuntoVenta" />
+  </wsdl:message>
+  <wsdl:message name="AltaPuntoVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:AltaPuntoVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:EditarProducto" />
+  </wsdl:message>
+  <wsdl:message name="EditarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:EditarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditaPuntoVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:EditaPuntoVenta" />
+  </wsdl:message>
+  <wsdl:message name="EditaPuntoVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:EditaPuntoVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarProducto" />
+  </wsdl:message>
+  <wsdl:message name="BorrarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarPuntoVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarPuntoVenta" />
+  </wsdl:message>
+  <wsdl:message name="BorrarPuntoVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarPuntoVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneCatloginSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtieneCatlogin" />
+  </wsdl:message>
+  <wsdl:message name="ObtieneCatloginSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtieneCatloginResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaLoteSoapIn">
+    <wsdl:part name="parameters" element="tns:CargaLote" />
+  </wsdl:message>
+  <wsdl:message name="CargaLoteSoapOut">
+    <wsdl:part name="parameters" element="tns:CargaLoteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioInventarioSoap">
+    <wsdl:operation name="AccesoPortal">
+      <wsdl:input message="tns:AccesoPortalSoapIn" />
+      <wsdl:output message="tns:AccesoPortalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneRutas">
+      <wsdl:input message="tns:ObtieneRutasSoapIn" />
+      <wsdl:output message="tns:ObtieneRutasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePuntosVenta">
+      <wsdl:input message="tns:ObtienePuntosVentaSoapIn" />
+      <wsdl:output message="tns:ObtienePuntosVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProductosPV">
+      <wsdl:input message="tns:ObtieneProductosPVSoapIn" />
+      <wsdl:output message="tns:ObtieneProductosPVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneDetalleProducto">
+      <wsdl:input message="tns:ObtieneDetalleProductoSoapIn" />
+      <wsdl:output message="tns:ObtieneDetalleProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneAtribDisponibles">
+      <wsdl:input message="tns:ObtieneAtribDisponiblesSoapIn" />
+      <wsdl:output message="tns:ObtieneAtribDisponiblesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProductosDisponibles">
+      <wsdl:input message="tns:ObtieneProductosDisponiblesSoapIn" />
+      <wsdl:output message="tns:ObtieneProductosDisponiblesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProductos">
+      <wsdl:input message="tns:ObtieneProductosSoapIn" />
+      <wsdl:output message="tns:ObtieneProductosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneUsuarios">
+      <wsdl:input message="tns:ObtieneUsuariosSoapIn" />
+      <wsdl:output message="tns:ObtieneUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodosPuntosVenta">
+      <wsdl:input message="tns:ObtieneTodosPuntosVentaSoapIn" />
+      <wsdl:output message="tns:ObtieneTodosPuntosVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePerfiles">
+      <wsdl:input message="tns:ObtienePerfilesSoapIn" />
+      <wsdl:output message="tns:ObtienePerfilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodasRutas">
+      <wsdl:input message="tns:ObtieneTodasRutasSoapIn" />
+      <wsdl:output message="tns:ObtieneTodasRutasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodosPromotores">
+      <wsdl:input message="tns:ObtieneTodosPromotoresSoapIn" />
+      <wsdl:output message="tns:ObtieneTodosPromotoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePuntosVentaDisponibles">
+      <wsdl:input message="tns:ObtienePuntosVentaDisponiblesSoapIn" />
+      <wsdl:output message="tns:ObtienePuntosVentaDisponiblesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneIdUsuarioPorNombre">
+      <wsdl:input message="tns:ObtieneIdUsuarioPorNombreSoapIn" />
+      <wsdl:output message="tns:ObtieneIdUsuarioPorNombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneIdPerfilPorNombre">
+      <wsdl:input message="tns:ObtieneIdPerfilPorNombreSoapIn" />
+      <wsdl:output message="tns:ObtieneIdPerfilPorNombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodosAtributos">
+      <wsdl:input message="tns:ObtieneTodosAtributosSoapIn" />
+      <wsdl:output message="tns:ObtieneTodosAtributosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePassword">
+      <wsdl:input message="tns:ObtienePasswordSoapIn" />
+      <wsdl:output message="tns:ObtienePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapturarProducto">
+      <wsdl:input message="tns:CapturarProductoSoapIn" />
+      <wsdl:output message="tns:CapturarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AltaUsuario">
+      <wsdl:input message="tns:AltaUsuarioSoapIn" />
+      <wsdl:output message="tns:AltaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRuta">
+      <wsdl:input message="tns:AddRutaSoapIn" />
+      <wsdl:output message="tns:AddRutaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRutaPuntoVenta">
+      <wsdl:input message="tns:AddRutaPuntoVentaSoapIn" />
+      <wsdl:output message="tns:AddRutaPuntoVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAtribProducto">
+      <wsdl:input message="tns:AddAtribProductoSoapIn" />
+      <wsdl:output message="tns:AddAtribProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditaUsuario">
+      <wsdl:input message="tns:EditaUsuarioSoapIn" />
+      <wsdl:output message="tns:EditaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditaRuta">
+      <wsdl:input message="tns:EditaRutaSoapIn" />
+      <wsdl:output message="tns:EditaRutaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditAtribProducto">
+      <wsdl:input message="tns:EditAtribProductoSoapIn" />
+      <wsdl:output message="tns:EditAtribProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BajaUsuario">
+      <wsdl:input message="tns:BajaUsuarioSoapIn" />
+      <wsdl:output message="tns:BajaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorraRuta">
+      <wsdl:input message="tns:BorraRutaSoapIn" />
+      <wsdl:output message="tns:BorraRutaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorraRutaPuntoVenta">
+      <wsdl:input message="tns:BorraRutaPuntoVentaSoapIn" />
+      <wsdl:output message="tns:BorraRutaPuntoVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignaProductoPV">
+      <wsdl:input message="tns:AsignaProductoPVSoapIn" />
+      <wsdl:output message="tns:AsignaProductoPVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProducto">
+      <wsdl:input message="tns:AgregarProductoSoapIn" />
+      <wsdl:output message="tns:AgregarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AltaPuntoVenta">
+      <wsdl:input message="tns:AltaPuntoVentaSoapIn" />
+      <wsdl:output message="tns:AltaPuntoVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarProducto">
+      <wsdl:input message="tns:EditarProductoSoapIn" />
+      <wsdl:output message="tns:EditarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditaPuntoVenta">
+      <wsdl:input message="tns:EditaPuntoVentaSoapIn" />
+      <wsdl:output message="tns:EditaPuntoVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarProducto">
+      <wsdl:input message="tns:BorrarProductoSoapIn" />
+      <wsdl:output message="tns:BorrarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarPuntoVenta">
+      <wsdl:input message="tns:BorrarPuntoVentaSoapIn" />
+      <wsdl:output message="tns:BorrarPuntoVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneCatlogin">
+      <wsdl:input message="tns:ObtieneCatloginSoapIn" />
+      <wsdl:output message="tns:ObtieneCatloginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaLote">
+      <wsdl:input message="tns:CargaLoteSoapIn" />
+      <wsdl:output message="tns:CargaLoteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioInventarioSoap" type="tns:ServicioInventarioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AccesoPortal">
+      <soap:operation soapAction="http://localhost/AccesoPortal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneRutas">
+      <soap:operation soapAction="http://localhost/ObtieneRutas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePuntosVenta">
+      <soap:operation soapAction="http://localhost/ObtienePuntosVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProductosPV">
+      <soap:operation soapAction="http://localhost/ObtieneProductosPV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneDetalleProducto">
+      <soap:operation soapAction="http://localhost/ObtieneDetalleProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneAtribDisponibles">
+      <soap:operation soapAction="http://localhost/ObtieneAtribDisponibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProductosDisponibles">
+      <soap:operation soapAction="http://localhost/ObtieneProductosDisponibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProductos">
+      <soap:operation soapAction="http://localhost/ObtieneProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneUsuarios">
+      <soap:operation soapAction="http://localhost/ObtieneUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodosPuntosVenta">
+      <soap:operation soapAction="http://localhost/ObtieneTodosPuntosVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePerfiles">
+      <soap:operation soapAction="http://localhost/ObtienePerfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodasRutas">
+      <soap:operation soapAction="http://localhost/ObtieneTodasRutas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodosPromotores">
+      <soap:operation soapAction="http://localhost/ObtieneTodosPromotores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePuntosVentaDisponibles">
+      <soap:operation soapAction="http://localhost/ObtienePuntosVentaDisponibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneIdUsuarioPorNombre">
+      <soap:operation soapAction="http://localhost/ObtieneIdUsuarioPorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneIdPerfilPorNombre">
+      <soap:operation soapAction="http://localhost/ObtieneIdPerfilPorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodosAtributos">
+      <soap:operation soapAction="http://localhost/ObtieneTodosAtributos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePassword">
+      <soap:operation soapAction="http://localhost/ObtienePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapturarProducto">
+      <soap:operation soapAction="http://localhost/CapturarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaUsuario">
+      <soap:operation soapAction="http://localhost/AltaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRuta">
+      <soap:operation soapAction="http://localhost/AddRuta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRutaPuntoVenta">
+      <soap:operation soapAction="http://localhost/AddRutaPuntoVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAtribProducto">
+      <soap:operation soapAction="http://localhost/AddAtribProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditaUsuario">
+      <soap:operation soapAction="http://localhost/EditaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditaRuta">
+      <soap:operation soapAction="http://localhost/EditaRuta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditAtribProducto">
+      <soap:operation soapAction="http://localhost/EditAtribProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BajaUsuario">
+      <soap:operation soapAction="http://localhost/BajaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorraRuta">
+      <soap:operation soapAction="http://localhost/BorraRuta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorraRutaPuntoVenta">
+      <soap:operation soapAction="http://localhost/BorraRutaPuntoVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaProductoPV">
+      <soap:operation soapAction="http://localhost/AsignaProductoPV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProducto">
+      <soap:operation soapAction="http://localhost/AgregarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaPuntoVenta">
+      <soap:operation soapAction="http://localhost/AltaPuntoVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarProducto">
+      <soap:operation soapAction="http://localhost/EditarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditaPuntoVenta">
+      <soap:operation soapAction="http://localhost/EditaPuntoVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarProducto">
+      <soap:operation soapAction="http://localhost/BorrarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarPuntoVenta">
+      <soap:operation soapAction="http://localhost/BorrarPuntoVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneCatlogin">
+      <soap:operation soapAction="http://localhost/ObtieneCatlogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaLote">
+      <soap:operation soapAction="http://localhost/CargaLote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioInventarioSoap12" type="tns:ServicioInventarioSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AccesoPortal">
+      <soap12:operation soapAction="http://localhost/AccesoPortal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneRutas">
+      <soap12:operation soapAction="http://localhost/ObtieneRutas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePuntosVenta">
+      <soap12:operation soapAction="http://localhost/ObtienePuntosVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProductosPV">
+      <soap12:operation soapAction="http://localhost/ObtieneProductosPV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneDetalleProducto">
+      <soap12:operation soapAction="http://localhost/ObtieneDetalleProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneAtribDisponibles">
+      <soap12:operation soapAction="http://localhost/ObtieneAtribDisponibles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProductosDisponibles">
+      <soap12:operation soapAction="http://localhost/ObtieneProductosDisponibles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProductos">
+      <soap12:operation soapAction="http://localhost/ObtieneProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneUsuarios">
+      <soap12:operation soapAction="http://localhost/ObtieneUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodosPuntosVenta">
+      <soap12:operation soapAction="http://localhost/ObtieneTodosPuntosVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePerfiles">
+      <soap12:operation soapAction="http://localhost/ObtienePerfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodasRutas">
+      <soap12:operation soapAction="http://localhost/ObtieneTodasRutas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodosPromotores">
+      <soap12:operation soapAction="http://localhost/ObtieneTodosPromotores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePuntosVentaDisponibles">
+      <soap12:operation soapAction="http://localhost/ObtienePuntosVentaDisponibles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneIdUsuarioPorNombre">
+      <soap12:operation soapAction="http://localhost/ObtieneIdUsuarioPorNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneIdPerfilPorNombre">
+      <soap12:operation soapAction="http://localhost/ObtieneIdPerfilPorNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneTodosAtributos">
+      <soap12:operation soapAction="http://localhost/ObtieneTodosAtributos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtienePassword">
+      <soap12:operation soapAction="http://localhost/ObtienePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapturarProducto">
+      <soap12:operation soapAction="http://localhost/CapturarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaUsuario">
+      <soap12:operation soapAction="http://localhost/AltaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRuta">
+      <soap12:operation soapAction="http://localhost/AddRuta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRutaPuntoVenta">
+      <soap12:operation soapAction="http://localhost/AddRutaPuntoVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAtribProducto">
+      <soap12:operation soapAction="http://localhost/AddAtribProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditaUsuario">
+      <soap12:operation soapAction="http://localhost/EditaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditaRuta">
+      <soap12:operation soapAction="http://localhost/EditaRuta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditAtribProducto">
+      <soap12:operation soapAction="http://localhost/EditAtribProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BajaUsuario">
+      <soap12:operation soapAction="http://localhost/BajaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorraRuta">
+      <soap12:operation soapAction="http://localhost/BorraRuta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorraRutaPuntoVenta">
+      <soap12:operation soapAction="http://localhost/BorraRutaPuntoVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsignaProductoPV">
+      <soap12:operation soapAction="http://localhost/AsignaProductoPV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProducto">
+      <soap12:operation soapAction="http://localhost/AgregarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltaPuntoVenta">
+      <soap12:operation soapAction="http://localhost/AltaPuntoVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarProducto">
+      <soap12:operation soapAction="http://localhost/EditarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditaPuntoVenta">
+      <soap12:operation soapAction="http://localhost/EditaPuntoVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarProducto">
+      <soap12:operation soapAction="http://localhost/BorrarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarPuntoVenta">
+      <soap12:operation soapAction="http://localhost/BorrarPuntoVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneCatlogin">
+      <soap12:operation soapAction="http://localhost/ObtieneCatlogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaLote">
+      <soap12:operation soapAction="http://localhost/CargaLote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioInventario">
+    <wsdl:port name="ServicioInventarioSoap" binding="tns:ServicioInventarioSoap">
+      <soap:address location="http://localhost:46521/ServicioInventario.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioInventarioSoap12" binding="tns:ServicioInventarioSoap12">
+      <soap12:address location="http://localhost:46521/ServicioInventario.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

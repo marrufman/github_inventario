@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <id_usuario>1</id_usuario>
+    <nombre_usuario>admin1</nombre_usuario>
+    <password_usuario>4dm1n-</password_usuario>
+    <email>rodrigomarrufo@gmail.com</email>
+    <status>true</status>
+    <id_perfil>1</id_perfil>
+    <id_promotor>0</id_promotor>
+  </Table1>
+</NewDataSet>
